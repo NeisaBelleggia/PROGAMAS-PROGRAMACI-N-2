@@ -14,14 +14,14 @@ cargarle datos utilizando los códigos de los productos del archivo anterior. Ej
 
 def cargar_datos_de_productos():
     ruta = r"c:\Programacion2\productos.txt"
-    lista_productos=[]
+    lista_articulos=[]
     with open(ruta, 'r') as archivo:
         for linea in archivo:
             producto = linea.split(";")
             dic_prod = {"codigo":producto[0], "nombre":producto[1], "precio":int(producto[2])}
-            lista_productos.append(dic_prod)
-            print(lista_productos[len(lista_productos)-1])
-    return lista_productos
+            lista_articulos.append(dic_prod)
+            print(lista_articulos[len(lista_articulos)-1])
+    return lista_articulos
 
 def cargar_datos_stock():
     ruta = r"c:\Programacion2\stock.txt"
